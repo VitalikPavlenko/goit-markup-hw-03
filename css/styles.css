@@ -1,5 +1,6 @@
 /* цвет основного фона #E5E5E5; */
 /* цвет дополнительного фона #2F303A; */
+/* цвет белого фона #FFFFFF; */
 
 /* цвет акцента #2196F3 */
 /* цвет основного логотипа #000000 */
@@ -16,6 +17,7 @@
 :root {
   --background-primary-color: #e5e5e5;
   --background-secondary-color: #2f303a;
+  --background-wheit-color: #ffffff;
 
   --accent-color: #18a0fb;
   --logo-primary-text-color: #000000;
@@ -94,6 +96,11 @@ a {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.section {
+  margin-top: 94px;
+  margin-bottom: 94px;
 }
 
 .logo {
@@ -230,12 +237,6 @@ a {
 
 /* ----------------------------------about - section --------------------------------*/
 
-.about-container {
-  display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .about-list {
   display: flex;
 }
@@ -260,12 +261,6 @@ a {
 }
 
 /* ----------------------------------field - section --------------------------------*/
-
-.field-container {
-  /*display: flex;*/
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .field-title {
   color: var(--title-text-color);
@@ -307,7 +302,7 @@ a {
   line-height: 1.19;
   width: calc(100% / 4-30px);
   justify-content: center;
-  background-color: var(--background-primary-color);
+  background: var(--background-wheit-color);
   border-radius: 4px;
 }
 
@@ -329,17 +324,10 @@ a {
   color: var(-primary-text-color);
 }
 /* ------------------------portfolio-filtr - section --------------------------------*/
-.portfolio-main-container {
-  display: flex;
-  margin: 94px auto;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.portfolio-filtr {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+.portfolio-filtr-container {
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio-filtr-list {
@@ -354,8 +342,8 @@ a {
   background-color: #f5f4fa;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 22px;
+  padding-right: 22px;
 
   font-family: inherit;
   font-weight: 500;
@@ -379,20 +367,31 @@ a {
 
 /* ------------------------portfolio-gallery-list - section --------------------------*/
 
-.portfolio-gallery-container {
-  display: flex;
-}
+/*.portfolio-gallery-container {
+  justify-content: center;
+}*/
 
 .portfolio-gallery-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -60px;
+  margin-left: -30px;
 }
 
 .portfolio-gallery-item {
-  display: flex;
-  width: calc(100% / var(--number-in-a-row));
-  justify-content: center;
+  width: calc(100% / var(--number-in-a-row)-30px);
   margin-top: 30px;
+  margin-left: 30px;
+}
+
+.gallery-card-name {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-left: 2px solid #f5f4fa;
+  border-right: 2px solid #f5f4fa;
+  border-bottom: 2px solid #f5f4fa;
 }
 
 .portfolio-gallery-name {
@@ -401,27 +400,14 @@ a {
   line-height: 2;
   letter-spacing: 0.06em;
   /*text-align: center;*/
-  margin-top: 20px;
-  margin-left: 24px;
+  margin-bottom: 4px;
   color: var(--title-text-color);
 }
 
 .portfolio-gallery-speciality {
   line-height: 1.87;
   /*text-align: center;*/
-  margin-top: 8px;
-  margin-bottom: 20px;
-  margin-left: 24px;
   color: var(--primary-text-color);
-}
-
-.border-card {
-  border: 2px solid #f5f4fa;
-}
-
-.portfolio-gallery-item:hover,
-.portfolio-gallery-item:focus {
-  outline: 2px solid var(--accent-color);
 }
 
 /* ------------------------.footer-logo - section --------------------------------*/
@@ -437,7 +423,12 @@ a {
 }*/
 
 .footer-logo {
+  display: block;
   margin-bottom: 20px;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 /*.address {
@@ -455,6 +446,7 @@ a {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  font-weight: 500;
 }
 
 .footer-link-addr {
