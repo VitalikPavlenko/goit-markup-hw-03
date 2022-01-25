@@ -98,11 +98,6 @@ a {
   margin: -1px;
 }
 
-.section {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
-
 .logo {
   font-family: Raleway, csans-serif;
   color: var(--accent-color);
@@ -237,6 +232,10 @@ a {
 
 /* ----------------------------------about - section --------------------------------*/
 
+.about {
+  padding-top: 94px;
+}
+
 .about-list {
   display: flex;
 }
@@ -262,6 +261,11 @@ a {
 
 /* ----------------------------------field - section --------------------------------*/
 
+.field {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .field-title {
   color: var(--title-text-color);
   font-size: 36px;
@@ -279,6 +283,8 @@ a {
 /* ----------------------------------person-comand - section --------------------------------*/
 
 .person-comand {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
   justify-content: center;
 }
@@ -303,7 +309,9 @@ a {
   width: calc(100% / 4-30px);
   justify-content: center;
   background: var(--background-wheit-color);
-  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .person {
@@ -323,7 +331,12 @@ a {
   text-align: center;
   color: var(-primary-text-color);
 }
-/* ------------------------portfolio-filtr - section --------------------------------*/
+/* ------------------------portfolio-gallery - section --------------------------------*/
+
+.portfolio-gallery {
+  padding-top: 110px;
+  padding-bottom: 94px;
+}
 
 .portfolio-filtr-container {
   display: flex;
@@ -332,6 +345,7 @@ a {
 
 .portfolio-filtr-list {
   display: flex;
+  margin-bottom: 50px;
 }
 
 .portfolio-filtr-item {
@@ -355,6 +369,12 @@ a {
   cursor: pointer;
 }
 
+.portfolio-filtr-btn:hover,
+.portfolio-filtr-btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .portfolio-filtr-item + .portfolio-filtr-item {
   margin-left: 8px;
 }
@@ -367,14 +387,10 @@ a {
 
 /* ------------------------portfolio-gallery-list - section --------------------------*/
 
-/*.portfolio-gallery-container {
-  justify-content: center;
-}*/
-
 .portfolio-gallery-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -60px;
+  margin-top: -30px;
   margin-left: -30px;
 }
 
