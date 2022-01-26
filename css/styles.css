@@ -9,7 +9,8 @@
 /* цвет текста #000000 */
 /* цвет белого текста #000000 */
 /* цвет текста заглавий #212121 */
-/* цвет текста "контактов" rgba(117, 117, 117, 1) */
+/* цвет текста "контактов header" rgba(117, 117, 117, 1) */
+/* цвет текста "контактов footer" rgba(255, 255, 255, 0.6) */
 
 /* цколичество карточек в ряду галереи -3 */
 
@@ -26,7 +27,8 @@
   --primary-text-color: #757575;
   --primary-white-color: #ffffff;
   --title-text-color: #212121;
-  --text-kontact: rgba(117, 117, 117, 1);
+  --text-kontact-header: rgba(117, 117, 117, 1);
+  --text-kontact-footer: rgba(255, 255, 255, 0.6);
 
   --number-in-a-row: 3;
 }
@@ -111,7 +113,7 @@ a {
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
@@ -173,7 +175,7 @@ a {
 .header-link-mail,
 .header-link-tel {
   list-style: none;
-  color: var(--text-kontact);
+  color: var(--text-kontact-header);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -213,6 +215,7 @@ a {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  letter-spacing: 0.06em;
 }
 
 .hero-btn {
@@ -240,12 +243,15 @@ a {
   display: flex;
 }
 
+.about-item {
+  width: 270px;
+}
+
 .about-item + .about-item {
   margin-left: 30px;
 }
 
 .about-title {
-  width: 270px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -334,18 +340,14 @@ a {
 /* ------------------------portfolio-gallery - section --------------------------------*/
 
 .portfolio-gallery {
-  padding-top: 110px;
+  padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.portfolio-filtr-container {
-  display: flex;
-  justify-content: center;
 }
 
 .portfolio-filtr-list {
   display: flex;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 .portfolio-filtr-item {
@@ -471,5 +473,5 @@ a {
 
 .footer-link-mail,
 .footer-link-tel {
-  color: var(--text-kontact);
+  color: var(--text-kontact-footer);
 }
